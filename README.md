@@ -1,6 +1,6 @@
 # Docker Golang
 
-Docker image containing tools to help Golang development. Tagging follows Go versioning.
+Go and friends (Glide, git, bash, etc). Tagging follows Go versioning.
 
 - Go
 - Glide
@@ -10,9 +10,9 @@ Docker image containing tools to help Golang development. Tagging follows Go ver
 
 ## Usage
 
+`$ docker run --rm amaysim/golang:1.7.5`
+
 ```bash
-# pull docker image
-$ make dockerPull
 # build image locally if you want to test locally
 $ make dockerBuild
 # go inside the container
