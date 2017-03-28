@@ -1,6 +1,6 @@
 GO_VERSION = 1.7.5
 IMAGE_NAME ?= amaysim/golang:$(GO_VERSION)
-
+TAG = v$(GO_VERSION)
 dockerPull:
 	docker pull $(IMAGE_NAME)
 .PHONY: dockerPull
@@ -14,8 +14,8 @@ dockerShell:
 .PHONY: dockerShell
 
 gitTag:
-	-git tag -d v$(GO_VERSION)
-	-git push origin :refs/tags/v$(GO_VERSION)
-	git tag $(GO_VERSION)
-	git push origin v$(GO_VERSION)
+	-git tag -d $(TAG)
+	-git push origin :refs/tags/$(TAG)
+	git tag $(TAG)
+	git push origin $(TAG)
 .PHONY: gitTag
