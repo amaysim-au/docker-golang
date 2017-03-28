@@ -10,7 +10,7 @@ Go and friends (Glide, git, bash, etc). Tagging follows Go versioning.
 
 ## Usage
 
-`$ docker run --rm amaysim/golang:1.7.5`
+`$ docker run --rm amaysim/golang:1.8.0`
 
 ```bash
 # build image locally if you want to test locally
