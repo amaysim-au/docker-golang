@@ -7,6 +7,7 @@ Go and friends (Glide, git, bash, etc). Tagging follows Go versioning.
 - Git
 - make
 - bash
+- gcc
 
 ## Usage
 
