@@ -1,9 +1,10 @@
 # Docker Golang
 
-Go and friends (Glide, git, bash, etc). Tagging follows Go versioning.
+Go and friends (Glide, dep, git, bash, etc). Tagging follows Go versioning.
 
 - Go
-- Glide
+- [Glide](https://github.com/Masterminds/glide)
+- [Dep](https://github.com/golang/dep)
 - Git
 - make
 - bash
@@ -11,17 +12,19 @@ Go and friends (Glide, git, bash, etc). Tagging follows Go versioning.
 
 ## Usage
 
-`$ docker run --rm amaysim/golang:1.8.0`
+`$ docker run --rm amaysim/golang:1.8.3`
 
 ```bash
 # build image locally if you want to test locally
-$ make dockerBuild
+$ make build
 # go inside the container
-$ make dockerShell
+$ make shell
 # go version
 > go version
 # glide version
 > glide --version
+# go dep
+> dep status
 > exit
 ```
 
@@ -33,10 +36,9 @@ $ make dockerShell
 2. Change `FROM` of `Dockerfile`
 3. Build and test locally
 4. Commit and push the changes
-5. Go to [hub.docker.com](hub.docker.com)
-6. In `Build Settings` tab, add a new `Tag` with the new version like `v1.7.5`
-8. Tag the commit with the command `make gitTag`
-9. In `Build Details` tab, you should now see build `1.7.5` kicking off
+5. Tag the commit with the command `make gitTag`
+6. Go to [hub.docker.com/amaysim](hub.docker.com/amaysim)
+7. In `Build Details` tab, you should now see build `version` kicking off
 
 ### Fix for the current version
 
@@ -44,5 +46,5 @@ $ make dockerShell
 2. Build and test locally
 3. Commit and push the changes
 4. Run `make gitTag`
-5. Go to [hub.docker.com](hub.docker.com)
-6. In `Build Details` tab, you should now see build and `1.7.5` kicking off
+5. Go to [hub.docker.com/amaysim](hub.docker.com/amaysim)
+6. In `Build Details` tab, you should now see build `version` kicking off

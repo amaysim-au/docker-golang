@@ -1,17 +1,17 @@
-GO_VERSION = 1.8.0
+GO_VERSION = 1.8.3
 IMAGE_NAME ?= amaysim/golang:$(GO_VERSION)
-TAG = v$(GO_VERSION)
+TAG = $(GO_VERSION)
 
-dockerPull:
+pull:
 	docker pull $(IMAGE_NAME)
 .PHONY: dockerPull
 
-dockerBuild:
+build:
 	docker build -t $(IMAGE_NAME) .
 .PHONY: dockerBuild
 
-dockerShell:
-	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) bash
+shell:
+	docker run --rm -it -v $(CURDIR):/opt/app $(IMAGE_NAME) bash
 .PHONY: dockerShell
 
 gitTag:

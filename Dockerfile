@@ -1,4 +1,4 @@
-FROM golang:1.8.0-alpine
+FROM golang:1.8.3-alpine
 MAINTAINER Frederic Lemay <frederic.lemay@amaysim.com.au>
 
 ENV GLIDE_VERSION=v0.12.3
@@ -12,5 +12,6 @@ RUN curl -fsSL "$GLIDE_DOWNLOAD_URL" -o glide.zip \
   && mv linux-amd64/glide /usr/local/bin \
   && rm -rf linux-amd64 \
   && rm glide.zip
+RUN go get -u github.com/golang/dep/cmd/dep
 
 CMD [ "go", "version" ]
