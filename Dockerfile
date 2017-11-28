@@ -1,4 +1,4 @@
-FROM golang:1.8.3-alpine
+FROM golang:1.9.2-alpine
 MAINTAINER Frederic Lemay <frederic.lemay@amaysim.com.au>
 
 ENV GLIDE_VERSION=v0.12.3
