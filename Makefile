@@ -1,4 +1,4 @@
-GO_VERSION = 1.8.3
+GO_VERSION = 1.9
 IMAGE_NAME ?= amaysim/golang:$(GO_VERSION)
 TAG = $(GO_VERSION)
 
