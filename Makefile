@@ -10,6 +10,12 @@ build:
 	docker build --no-cache -t $(IMAGE_NAME) .
 .PHONY: build
 
+test:
+	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) go version
+	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) dep version
+	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) zip
+.PHONY: test
+
 shell:
 	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) bash
 .PHONY: shell

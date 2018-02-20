@@ -9,6 +9,8 @@ Go, Dep, and Git
 ```bash
 # build image locally if you want to test locally
 $ make build
+# test the image
+$ make test
 # go inside the container
 $ make shell
 ```
