@@ -7,7 +7,7 @@ pull:
 .PHONY: pull
 
 build:
-	docker build -t $(IMAGE_NAME) .
+	docker build --no-cache -t $(IMAGE_NAME) .
 .PHONY: build
 
 shell:
