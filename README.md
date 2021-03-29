@@ -1,10 +1,10 @@
 # Docker Golang
 
-Go, Dep, and Git
+Go, Zip, and Git
 
 ## Usage
 
-`$ docker run --rm amaysim/golang:1.10.0-stretch`
+`$ docker run --rm amaysim/golang:1.16.2-buster`
 
 ```bash
 # build image locally if you want to test locally
