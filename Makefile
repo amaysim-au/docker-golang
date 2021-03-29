@@ -1,4 +1,4 @@
-GO_VERSION = 1.14.15-stretch
+GO_VERSION = 1.16.2-buster
 IMAGE_NAME ?= amaysim/golang:$(GO_VERSION)
 TAG = $(GO_VERSION)
 
@@ -12,7 +12,6 @@ build:
 
 test:
 	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) go version
-	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) dep version
 	docker run --rm -it -v $(PWD):/opt/app $(IMAGE_NAME) zip
 .PHONY: test
 
