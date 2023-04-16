@@ -4,7 +4,7 @@ Go, Zip, and Git
 
 ## Usage
 
-`$ docker run --rm amaysim/golang:1.16.2-buster`
+`$ docker run --rm amaysim/golang:1.17.13-buster`
 
 ```bash
 # build image locally if you want to test locally
